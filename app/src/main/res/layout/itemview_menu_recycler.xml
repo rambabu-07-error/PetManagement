@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="150dp"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <TextView
+        android:id="@+id/tvBtnName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Log Out"
+        android:paddingStart="8dp"
+        android:paddingTop="5dp"
+        android:paddingEnd="8dp"
+        android:gravity="center|start"
+        android:textSize="18sp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/sen_semi_bold"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/orangeLight"
+        app:layout_constraintStart_toStartOf="@id/tvBtnName"
+        app:layout_constraintEnd_toEndOf="@id/tvBtnName"
+        app:layout_constraintTop_toBottomOf="@id/tvBtnName"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

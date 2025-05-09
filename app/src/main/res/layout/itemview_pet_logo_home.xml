@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="5dp"
+    android:background="@drawable/bg_item_white_ll"
+    android:layout_marginHorizontal="5dp"
+    android:padding="5dp">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/ivPetLogo"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginHorizontal="5dp"
+        android:padding="5dp"
+        android:scaleType="centerCrop"
+        app:civ_border_color="@color/white_light"
+        app:civ_border_width="2dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@mipmap/ic_cata" />
+
+    <TextView
+        android:id="@+id/tvPetName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Pet Name"
+        android:textSize="15sp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/sen_semi_bold"
+        app:layout_constraintStart_toEndOf="@id/ivPetLogo"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"/>
+
+    <TextView
+        android:id="@+id/tvPetType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Pet Type"
+        android:textSize="15sp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/sen_bold"
+        app:layout_constraintStart_toStartOf="@id/tvPetName"
+        app:layout_constraintTop_toBottomOf="@id/tvPetName"
+        android:layout_marginTop="5dp"/>
+
+    <ImageView
+        android:id="@+id/btnLike"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:src="@drawable/heart_fill"
+        android:layout_marginEnd="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/ivPetLogo"
+        app:layout_constraintBottom_toBottomOf="@id/ivPetLogo"
+        app:tint="@color/color_primary"/>
+    <TextView
+        android:id="@+id/tvLike"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Liked"
+        app:layout_constraintTop_toBottomOf="@id/btnLike"
+        app:layout_constraintStart_toStartOf="@id/btnLike"
+        app:layout_constraintEnd_toEndOf="@id/btnLike"
+        android:textColor="@color/color_primary"
+        android:textSize="12sp"
+        android:fontFamily="@font/sen_medium"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
