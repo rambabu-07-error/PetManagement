@@ -1,3 +1,5 @@
+import com.google.devtools.ksp.KspExperimental
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
@@ -42,6 +44,12 @@ android {
     kotlinOptions {
         jvmTarget = JavaVersion.VERSION_17.toString()
     }
+
+    ksp {
+        @OptIn(KspExperimental::class)
+        useKsp2 = false
+    }
+
 }
 
 dependencies {

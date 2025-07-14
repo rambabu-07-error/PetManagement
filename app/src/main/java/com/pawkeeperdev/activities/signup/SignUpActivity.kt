@@ -9,6 +9,7 @@ import android.view.View
 import android.view.inputmethod.EditorInfo
 import androidx.activity.viewModels
 import androidx.constraintlayout.widget.ConstraintLayout
+import androidx.core.view.WindowCompat
 import com.pawkeeperdev.activities.BaseActivity
 import com.pawkeeperdev.config.CommonUtils
 import com.pawkeeperdev.config.TouchEffectListener
@@ -33,6 +34,8 @@ class SignUpActivity : BaseActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivitySignUpBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        WindowCompat.setDecorFitsSystemWindows(window, true)
+
         binding.btnSignUp.setOnTouchListener(TouchEffectListener())
         binding.btnSignUp.setOnClickListener {
             signUp()
