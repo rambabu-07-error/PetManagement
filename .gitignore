@@ -1,15 +1,32 @@
+# Ignore IntelliJ/Android Studio project files
 *.iml
-.gradle
-/local.properties
-/.idea/caches
-/.idea/libraries
-/.idea/modules.xml
-/.idea/workspace.xml
-/.idea/navEditor.xml
-/.idea/assetWizardSettings.xml
-.DS_Store
-/build
-/captures
-.externalNativeBuild
-.cxx
+.idea/
+.idea/caches/
+.idea/libraries/
+.idea/modules.xml
+.idea/workspace.xml
+.idea/navEditor.xml
+.idea/assetWizardSettings.xml
+
+# Ignore Gradle files & local properties
+.gradle/
 local.properties
+
+# Ignore OS-generated files
+.DS_Store
+
+# Ignore build outputs
+/build/
+app/build/
+.externalNativeBuild/
+.cxx/
+captures/
+
+# Ignore APKs and intermediate outputs
+*.apk
+*.ap_
+
+# Optional: Crashlytics & Firebase (if used)
+crashlytics-build.properties
+google-services.json
+
