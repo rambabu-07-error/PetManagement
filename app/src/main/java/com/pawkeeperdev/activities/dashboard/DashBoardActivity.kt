@@ -9,6 +9,8 @@ import com.pawkeeperdev.activities.dashboard.ui.profile.ProfileFragment
 import com.pawkeeperdev.config.CommonUtils
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.pawkeeperdev.R
+import com.pawkeeperdev.config.applyBottomAndSideInsets
+import com.pawkeeperdev.config.applyTopAndSideInsets
 import com.pawkeeperdev.databinding.ActivityDashBoardBinding
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -26,6 +28,8 @@ class DashBoardActivity : BaseActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityDashBoardBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        binding.container.applyTopAndSideInsets()
+        binding.bottomNav.applyBottomAndSideInsets()
         CommonUtils.thisIsDashBoard = true
         container = binding.container
         bottomNav = binding.bottomNav

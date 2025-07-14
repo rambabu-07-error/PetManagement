@@ -20,6 +20,7 @@ import com.pawkeeperdev.entities.PetDataModel
 import com.pawkeeperdev.R
 import com.pawkeeperdev.activities.addPets.AddPetActivity
 import com.pawkeeperdev.activities.dashboard.DashBoardActivity
+import com.pawkeeperdev.config.applyTopAndSideInsets
 import com.pawkeeperdev.databinding.FragmentHomeBinding
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -135,6 +136,9 @@ class HomeFragment : Fragment(), View.OnClickListener {
 
 
     private fun initView(list: List<PetDataModel>) {
+        //Android 15 edge support
+        binding.llTopDetail.applyTopAndSideInsets()
+
         binding.swiper.isRefreshing = false
         binding.llMoreOptions.visibility = View.GONE
         binding.llMyPets.visibility = View.GONE
